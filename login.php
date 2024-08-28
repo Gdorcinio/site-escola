@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="menu-button" onclick="toggleMenu(event)">☰</button>
+
+    <?php include_once 'includes/menu.php'; ?>
+
+    <main>
+        <div class="content">
+            <h1>Login</h1>
+            <form action="back/processa_login.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                
+                <button type="submit">Entrar</button>
+            </form>
+
+            <?php
+                if (isset($_GET['mensagem']) && $_GET['mensagem'] == 'erro') {
+                    echo '<p style="color: red; text-align: center;">Email ou senha inválidos!</p>';
+                }
+            ?>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
