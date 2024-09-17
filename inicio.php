@@ -1,3 +1,5 @@
+<?php
+session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php include_once 'includes/cabecalho.php'; ?>
@@ -9,10 +11,9 @@
 
     <header>
         <?php
-            session_start();
-            if (isset($_SESSION['usuario_nome'])) {
-                echo '<p class="bem-vindo">Bem-vindo, ' . $_SESSION['usuario_nome'] . '!</p>';
-            }
+        if (isset($_SESSION['usuario_nome'])) {
+            echo '<p class="bem-vindo">Bem-vindo, ' . $_SESSION['usuario_nome'] . '!</p>';
+        }
         ?>
         <p>Escola Milanês</p>
         
@@ -20,8 +21,13 @@
 
     <main>
         <div class="content">
-            <h1>Bem-vindo à Escola Milanês</h1>
-            <p>Este é o portal principal da Escola Milanês, onde você pode acessar várias seções do site.</p>
+            <!-- Adicionando a imagem principal -->
+            <div class="imagem-principal">
+                <img src="img/Captura de tela 2024-09-12 194328.png " alt="Imagem Principal da Escola" class="img-escola">
+            </div>
+
+            <h1>Bem-vindo à Escola Quintino Folhiarini Dajori</h1>
+            <p>Este é o portal principal da Escola  Quintino Folhiarini Dajori.</p>
             <ul>
                 <li><a href="sobre.php">Sobre</a></li>
                 <li><a href="contato.php">Contato</a></li>
@@ -30,9 +36,9 @@
                 <li><a href="cadastro_usuario.php">Cadastre-se</a></li>
             </ul>
         </div>
-        
+
         <footer>
-            <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Escola Quintino Folhiarini Dajori. Todos os direitos reservados.</p>
         </footer>
     </main>
 

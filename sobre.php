@@ -1,3 +1,5 @@
+<?php
+            session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,16 +18,23 @@
 
     ?>
     <header>
-        <p>Escola Milanês</p>
+        <p>Escola quintino folhiarini dajori</p>
     </header>
     <main>
         <div class="content">
             <h1>Página de Sobre</h1>
-            <p>Este é o conteúdo principal da página de sobre.</p>
+            <p><p>A Escola Quintino, localizada no bairro Presidente Vargas, em Içara, é uma instituição de ensino que tem uma longa história de compromisso com a educação na região sul.</p>
+
+<p>Fundada com o objetivo de oferecer uma educação de qualidade para a comunidade local, a escola tem desempenhado um papel fundamental na formação de gerações de estudantes.</p>
+
+<p>Ao longo dos anos, a Escola Quintino passou por diversas reformas e modernizações, sempre buscando melhorar suas instalações e métodos de ensino para acompanhar as novas demandas educacionais.</p>
+
+<p>Hoje, a escola é conhecida pelo seu corpo docente dedicado e pelo foco no desenvolvimento integral dos alunos, promovendo tanto o aprendizado acadêmico quanto valores sociais importantes.</p>
+.</p>
         </div>
         
         <footer>
-            <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Escola quintino folhiarini dajori. Todos os direitos reservados.</p>
         </footer>
     </main>
 

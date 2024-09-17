@@ -1,0 +1,19 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $mensagem = $_POST['mensagem'];
+
+    // Configurar o email
+    $to = "suporte@escolaquintino.com.br";
+    $subject = "Mensagem de Suporte de $nome";
+    $body = "Nome: $nome\nEmail: $email\n\nMensagem:\n$mensagem";
+
+    // Enviar o email
+    if (mail($to, $subject, $body)) {
+        echo "Mensagem enviada com sucesso!";
+    } else {
+        echo "Falha ao enviar a mensagem.";
+    }
+}
+?>

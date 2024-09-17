@@ -1,0 +1,99 @@
+* {
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: bisque;
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+    margin: 0; /* Garante que não haja margem padrão */
+    padding: 0; /* Garante que não haja padding padrão */
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    position: fixed; /* Garante que o cabeçalho fique fixo no topo */
+    top: 0; /* Fixar no topo */
+    left: 0;
+    z-index: 2; /* Garante que o cabeçalho fique acima do menu lateral */
+}
+
+nav {
+    position: fixed; 
+    left: 0;
+    height: calc(100%); /* Ajusta a altura do menu para não afetar o cabeçalho */
+    width: 20%;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+nav ul {           
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 10px;
+    box-shadow: #fff;
+}
+
+nav a {
+    padding: 10px 15px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #3e3434;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 70px; /* Ajusta o espaçamento superior para o conteúdo não ficar escondido atrás do cabeçalho */
+    margin-bottom: 60px; /* Ajuste conforme necessário para o rodapé */
+}
+
+.menu-button {
+    background-color: bisque;
+
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 60px;
+    z-index: 3; /* Garante que o botão fique acima do menu lateral */
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5a4949;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 70%;
+    }
+    .content {
+        margin-left: 0;
+    }
+}

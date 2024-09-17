@@ -23,12 +23,13 @@ header {
 }
 
 nav {
+    top: 70px;
     position: fixed;
     left: 0;
-    height: 100%;
+    height: calc(80%); /* Ajusta a altura do menu para não afetar o cabeçalho */
     width: 20%;
-    background-color: #121212;
-    color: #fff;
+    background-color: bisque;
+    color: #000000;
     overflow-x: hidden;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -45,7 +46,7 @@ nav li {
 
 nav a {
     padding: 10px 15px;
-    color: #fff;
+    color: #000000;
     display: block;
     text-decoration: none;
 }
@@ -133,3 +134,16 @@ footer {
 .content ul li a:hover {
     text-decoration: underline;
 }
+.img-escola {
+    width: 50%;
+    height: auto;
+    max-height: 400px; /* Define uma altura máxima */
+    object-fit: cover; /* Corta a imagem para caber no container */
+    margin-bottom: 20px;
+}
+
+.imagem-principal {
+    text-align: center; /* Centraliza a imagem */
+    margin-bottom: 20px; /* Espaço entre a imagem e o conteúdo seguinte */
+}
+

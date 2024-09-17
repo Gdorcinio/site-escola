@@ -32,7 +32,7 @@
         </div>
         
         <footer>
-            <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Escola quintino folhiarini dajori. Todos os direitos reservados.</p>
         </footer>
     </main>
 

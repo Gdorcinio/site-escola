@@ -12,7 +12,7 @@
 
     <main>
         <div class="content">
-            <h1>Cadastro de Usuários</h1>
+            <h1>Cadastro de Alunos</h1>
             <form action="back/processa_cadastro.php" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -28,7 +28,7 @@
         </div>
         
         <footer>
-            <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Escola quintino folhiarini dajori</p>
         </footer>
     </main>
 
