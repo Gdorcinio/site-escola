@@ -23,7 +23,7 @@ session_start(); ?>
         <div class="content">
             <!-- Adicionando a imagem principal -->
             <div class="imagem-principal">
-                <img src="img/Captura de tela 2024-09-12 194328.png " alt="Imagem Principal da Escola" class="img-escola">
+                <img src="img/Captura de tela 2024-09-19 190546.png " alt="Imagem Principal da Escola" class="img-escola">
             </div>
 
             <h1>Bem-vindo à Escola Quintino Folhiarini Dajori</h1>

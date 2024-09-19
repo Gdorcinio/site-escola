@@ -1,10 +1,13 @@
 <?php
-session_start(); ?>
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <?php include_once 'includes/cabecalho.php'; ?>
 <?php include_once 'includes/menu.php'; ?>
 
+<?php
 // Conectar ao banco de dados
 require_once 'banco/conexao.php';
 
@@ -13,10 +16,6 @@ $stmt = $pdo->query('SELECT * FROM turmas');
 $turmas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<?php include_once 'includes/cabecalho.php'; ?>
-<?php include_once 'includes/menu.php'; ?>
 <body>
     <button class="menu-button" onclick="toggleMenu(event)">☰</button>
 
@@ -26,9 +25,10 @@ $turmas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <main>
         <div class="content">
-            <h1>Turmas</h1>
+            <h1>Turmas Disponíveis</h1>
+            
             <?php if ($turmas): ?>
-                <table>
+                <table class="turmas-table">
                     <thead>
                         <tr>
                             <th>Nome da Turma</th>
