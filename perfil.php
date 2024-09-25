@@ -33,10 +33,22 @@ if (!$usuario) {
     <button class="menu-button" onclick="toggleMenu(event)">☰</button>
     <?php include_once 'includes/menu.php'; ?>
 
+    <header>
+        <?php
+        if (isset($_SESSION['usuario_nome'])) {
+            echo '<p class="bem-vindo">Bem-vindo, ' . $_SESSION['usuario_nome'] . '!</p>';
+        }else{
+            echo 'Escola de Içara'. '!</p>';
+        }
+        ?>
+        <p>Quintino Folhiarini Dajori</p>    
+    </header>
+
+
     <main>
         <div class="content">
             <h1>Perfil do Usuário</h1>
-            <form action="back/processa_atualizacao.php" method="POST">
+            <form action="back/atualizar_usuario.php" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
                 

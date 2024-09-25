@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: bisque;
+    background-color: #f0f4f8; /* Fundo suave azul claro */
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -14,8 +14,8 @@ body {
 
 header {
     text-align: center;
-    background-color: bisque; /* Cor original do cabeçalho */
-    color: #000; /* Texto preto */
+    background-color: #4c5c68; /* Fundo azul escuro */
+    color: #ffffff; /* Texto branco */
     padding: 20px;
     position: fixed;
     top: 0;
@@ -25,13 +25,13 @@ header {
 }
 
 nav {
-    top: 70px;
+    top: 90px; /* Ajuste aumentado para afastar mais do botão */
     position: fixed;
     left: 0;
     height: calc(80%);
     width: 20%;
-    background-color: bisque; /* Cor original do menu */
-    color: #000;
+    background-color: #34495e; /* Azul escuro mais vibrante */
+    color: #ffffff; /* Texto branco */
     overflow-x: hidden;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -49,15 +49,16 @@ nav li {
 
 nav a {
     padding: 12px 18px;
-    color: #000; /* Texto preto */
+    color: #ffffff; /* Texto branco */
     display: block;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #3e3434; /* Cor original de hover */
+    background-color: #2c3e50; /* Azul mais escuro no hover */
+    color: #ffdd57; /* Amarelo vibrante no hover */
 }
 
 .content {
@@ -68,8 +69,8 @@ nav a:hover {
 }
 
 .menu-button {
-    background-color: bisque; /* Cor original do botão */
-    color: black; /* Texto preto */
+    background-color: #ffffff; /* Amarelo vibrante */
+    color: #34495e; /* Texto azul escuro */
     position: fixed;
     top: 20px;
     left: 20px;
@@ -81,11 +82,12 @@ nav a:hover {
     z-index: 3;
     user-select: none;
     outline: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .menu-button:hover {
-    background-color: #d2b48c; /* Uma versão mais escura de bisque no hover */
+    background-color: #f39c12; /* Amarelo escuro no hover */
+    color: #ffffff; /* Texto branco no hover */
 }
 
 footer {
@@ -93,8 +95,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #5a4949; /* Mantido */
-    color: white;
+    background-color: #2c3e50; /* Azul mais escuro */
+    color: #ffffff; /* Texto branco */
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
@@ -111,19 +113,19 @@ footer {
     margin-right: 20px;
     font-size: 1.2em;
     margin-top: 20px;
-    color: #000; /* Preto para o texto */
+    color: #34495e; /* Azul escuro */
 }
 
 .content h1 {
     margin-bottom: 20px;
     font-size: 2.5em;
-    color: #000; /* Texto preto */
+    color: #34495e; /* Azul escuro */
 }
 
 .content p {
     margin-bottom: 30px;
     font-size: 1.3em;
-    color: #555;
+    color: #555555; /* Cinza suave */
 }
 
 .content ul {
@@ -137,7 +139,7 @@ footer {
 }
 
 .content ul li a {
-    color: #000; /* Texto preto */
+    color: #34495e; /* Azul escuro */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -173,15 +175,68 @@ footer {
 }
 
 .turmas-table th {
-    background-color: #3e3434; /* Cor original de fundo para a tabela */
+    background-color: #2c3e50; /* Azul escuro */
     color: white;
 }
 
 .turmas-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #ecf0f1; /* Cinza claro */
 }
 
 .turmas-table tr:hover {
-    background-color: #ddd;
+    background-color: #bdc3c7; /* Cinza mais escuro */
 }
 
+/* Estilos específicos para o formulário de matrícula */
+form {
+    background-color: #ffffff; /* Branco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #34495e; /* Azul escuro */
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #27ae60; /* Verde vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218c53; /* Verde escuro no hover */
+}
+
+.message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

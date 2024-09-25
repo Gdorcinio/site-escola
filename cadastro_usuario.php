@@ -7,6 +7,17 @@
     <button class="menu-button" onclick="toggleMenu(event)">☰</button>
 
     <?php include_once 'includes/menu.php'; ?>
+    <header>
+        <?php
+        if (isset($_SESSION['usuario_nome'])) {
+            echo '<p class="bem-vindo">Bem-vindo, ' . $_SESSION['usuario_nome'] . '!</p>';
+        }else{
+            echo 'Escola de Içara'. '!</p>';
+        }
+        ?>
+        <p>Quintino Folhiarini Dajori</p>    
+    </header>
+
     <?php include_once 'includes/bemvindo.php'; ?>
 
 
@@ -22,7 +33,7 @@
                 
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required>
-                
+                <br>
                 <button type="submit">Cadastrar</button>
             </form>
         </div>

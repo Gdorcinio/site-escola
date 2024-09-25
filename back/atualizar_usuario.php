@@ -13,23 +13,24 @@ try {
 
     // Verificar se o formulário foi submetido
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $id_usuario = $_SESSION['usuario_id']; // ID do usuário a ser atualizado
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografar a senha
-
-        // Verificar se o e-mail já existe
-        $stmt_check = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email");
+        
+        // Verificar se o e-mail já existe, ignorando o próprio e-mail do usuário
+        $stmt_check = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email AND id != :id");
         $stmt_check->bindParam(':email', $email);
+        $stmt_check->bindParam(':id', $id_usuario);
         $stmt_check->execute();
 
         if ($stmt_check->rowCount() > 0) {
             echo "Este e-mail já está cadastrado. Tente outro.";
         } else {
-            // Preparar a consulta SQL para inserir os dados do usuário
-            $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
+            // Preparar a consulta SQL para atualizar os dados do usuário
+            $stmt = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email WHERE id = :id");
             $stmt->bindParam(':nome', $nome);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':senha', $senha);
+            $stmt->bindParam(':id', $id_usuario);
 
             // Executar a consulta
             if ($stmt->execute()) {
@@ -37,7 +38,7 @@ try {
                 header("Location: ../inicio.php?mensagem=sucesso");
                 exit();
             } else {
-                echo "Erro ao cadastrar usuário.";
+                echo "Erro ao atualizar usuário.";
             }
         }
     }

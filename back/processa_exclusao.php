@@ -12,6 +12,11 @@ if (!isset($_SESSION['usuario_id'])) {
 $usuario_id = $_SESSION['usuario_id'];
 
 // Prepara a exclusão do usuário
+$stmt = $connect->prepare("DELETE FROM notas WHERE email_aluno = ?");
+$stmt->bind_param('i', $_SESSION['email_aluno']);
+$stmt->execute();
+
+// Prepara a exclusão do usuário
 $stmt = $connect->prepare("DELETE FROM usuarios WHERE id = ?");
 $stmt->bind_param('i', $usuario_id);
 $stmt->execute();
@@ -20,7 +25,7 @@ $stmt->execute();
 if ($stmt->affected_rows > 0) {
     // Exclui a sessão e redireciona para a página inicial
     session_destroy();
-    header('Location: ../index.php');
+    header('Location: ../inicio.php');
     exit();
 } else {
     echo "Erro ao excluir a conta.";

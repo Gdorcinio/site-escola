@@ -28,13 +28,14 @@ try {
             // Login bem-sucedido, salvar informações na sessão
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nome'] = $usuario['nome'];
+            $_SESSION['email_aluno'] = $usuario['email'];
 
             // Redirecionar para a página principal
-            header("Location: ../index.php");
+            header("Location: ../inicio.php");
             exit();
         } else {
             // Redirecionar de volta ao login com mensagem de erro
-            header("Location: ../login.php?mensagem=erro");
+            header("Location: ../inicio.php?mensagem=erro");
             exit();
         }
     }
